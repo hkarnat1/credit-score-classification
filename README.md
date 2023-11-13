@@ -1,14 +1,14 @@
 # Credit Score Classification
 
 ## Table of Contents
-1. [Project Scope](#project-scope)
+1. [Project Scope and Business Goal](#project-scope-and-business-goal)
 2. [Domain](#domain)
 3. [Literature Review](#literature-review)
 4. [Data Source](#data-source)
 5. [Domain-specific Challenges](#domain-specific-challenges)
 6. [KPI’s](#kpis)
 
-## Project Scope
+## Project Scope and Business Goal
 The primary focus of the project is to address the problem of assessing individuals' creditworthiness with precision using machine learning techniques. The specific tasks and opportunities within this scope include:
  
 a. **Credit Score Classification:**
