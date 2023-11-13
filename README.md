@@ -132,7 +132,17 @@ Credit scoring is a critical focus in banking to detect fraudulent customers and
 
 
 ## Data Source
-<!-- Content for Data Source -->
+We are using the credit score classification dataset available on Kaggle (https://www.kaggle.com/datasets/parisrohan/credit-score-classification). This dataset is segmented into training and testing sets, with the training portion comprising 100,000 rows and 28 columns, while the test dataset consists of 50,000 rows and 27 columns. The primary target column for prediction is the Credit Score, categorized into three main classes: Poor, Good, and Standard.
+
+
+Within the dataset, information for 12,500 customers is included, encompassing various details such as monthly income, the number of bank accounts and credit cards they possess, interest rates, credit utilization, and more.
+
+
+The dataset's overall quality is good, offering an extensive array of parameters related to the financial status of each customer. Despite its richness, there are missing values and some columns with blank entries, affecting less than 10% of the customer records. Addressing these issues is feasible through common techniques like replacing missing values with the mean, median, and mode, or deleting rows with substantial missing data that do not significantly contribute to the target variable.
+
+
+Throughout our exploration of datasets, we encountered challenges in finding one that included detailed financial information. The current dataset primarily covers payment history and monthly account balances, which are crucial factors in determining a person's financial health. In contrast, many other datasets found online lack this level of detail, often providing only basic information like interest rates and the number of accounts.
+
 
 ## Domain-specific Challenges
 <!-- Content for Domain-specific Challenges -->
