@@ -1,4 +1,4 @@
-<p align="center"><strong><font size="6">Credit Score Classification</font></strong></p>
+<p align="center"><strong><font size="26">Credit Score Classification</font></strong></p>
 
 ## Table of Contents
 1. [Table of Contents](#table-of-contents)
