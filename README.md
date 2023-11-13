@@ -1,7 +1,6 @@
-<p align="center"><strong><font size="26">Credit Score Classification</font></strong></p>
+# Credit Score Classification
 
 ## Table of Contents
-1. [Table of Contents](#table-of-contents)
 2. [Project Scope](#project-scope)
 3. [Domain](#domain)
 4. [Literature Review](#literature-review)
