@@ -113,20 +113,13 @@ Credit scoring in the banking sector is pivotal for identifying profitable custo
 
 3. W. Laesanklang, K. Sinapiromsaran and B. Intiyot, "Entropy multi-hyperplane credit scoring model," International Conference on Financial Theory and Engineering, Dubai, United Arab Emirates, pp. 91-94, doi: 10.1109/ICFTE.2010.5499418.
 
-
-
-
 The Entropy Multi-Hyperplane Credit Scoring Model is a decision-making approach designed to classify loan applicants as payers or defaulters while minimizing misclassification costs. It achieves this by using multiple hyperplanes based on entropy order. In the initial stage, a pair of hyperplanes is created using half of the attributes, which are sorted in ascending order of entropy. These hyperplanes categorize applicants into three groups: payers, defaulters, and unclassified individuals. From the unclassified group, another pair of hyperplanes is generated using the remaining attributes, following the same entropy order. These additional hyperplanes further divide the unclassified group into payers, defaulters, and unclassified applicants in the second stage. Finally, multidimensional hyperplanes created from all attributes are used to classify loan applicants into payers or defaulters. The study develops a mixed-integer programming model for this Entropy Multi-Hyperplane Credit Scoring Model to reduce misclassification costs. Experimental results indicate that this model outperforms a two-stage least-cost credit scoring model in terms of accuracy and requires fewer computational iterations than a multi-hyperplane credit scoring model. Moreover, it exhibits similar performance to other classification methods such as classification trees, neural networks, support vector machines, linear discriminant analysis, and CART. Future research could explore its performance with larger datasets.
-
 
 4. Y. Zhuang, Z. Xu and Y. Tang, "A Credit Scoring Model Based on Bayesian Network and Mutual Information," 12th Web Information System and Application Conference (WISA), Jinan, China, pp. 281-286, doi: 10.1109/WISA.2015.31.
 
-
 Credit scoring assesses client relationships based on empirical attributes and uses a scoring model to gauge credibility. However, these attributes often harbor uncertainties, necessitating feature selection. Bayesian networks (BN) are adept at handling uncertain data, and mutual information (MI) serves as a suitable technique for evaluating variable relationships in complex classification tasks. This study introduces BNMI, a credit scoring model that combines BN and MI to address these challenges. The BNMI model employs two core algorithms—BuildBN for variable selection and network learning, and AddParentsToTarget for adjusting the network structure by incorporating relevant attributes. By leveraging the strengths of BN and MI, BNMI aims to enhance credit scoring accuracy. Comparative experiments against three baseline models—decision trees, neural networks, and Bayesian networks—demonstrate that BNMI outperforms these models in terms of receiver operating characteristic (ROC). This suggests a promising application of the BNMI approach in the realm of credit scoring. The model's strength lies in its ability to better handle uncertainties within empirical attributes and improve the accuracy of credit scoring by incorporating the relationship insights offered by BN and MI.
 
-
 5. C. R. D. Devi and R. M. Chezian, "A relative evaluation of the performance of ensemble learning in credit scoring," IEEE International Conference on Advances in Computer Applications (ICACA), Coimbatore, India, pp. 161-165, doi: 10.1109/ICACA.2016.7887943.
-
 
 Credit scoring is a critical focus in banking to detect fraudulent customers and curb illegal activities. Ensemble classifiers in machine learning play a pivotal role in this realm. This study aims to evaluate the accuracy of ensemble methods in classifying customers as good or bad credit risks. Three ensemble methods—AdaBoost, Bagging, and Random Forest—are paired with various learning algorithms and applied to a credit card dataset, preceded by feature selection to identify crucial attributes. The study details specific models: AdaboostDS combines AdaBoost with a decision stump model to strengthen its predictive power. Bagging is employed on J48 and Reduced Error Pruning tree algorithms. These models are tested on the German credit dataset, assessing their performance without feature selection and with different iterations or tree values in the ensembles. The assessment encompasses accuracy, error rate, and ROC curve values. Random Forest consistently demonstrates superior performance in accuracy, ROC values, and minimized root mean squared error compared to the other classifiers. This comparative study provides valuable insights into the effectiveness of ensemble methods in predicting creditworthiness, identifying Random Forest as the most robust performer among the models tested.
 
@@ -134,18 +127,40 @@ Credit scoring is a critical focus in banking to detect fraudulent customers and
 ## Data Source
 We are using the credit score classification dataset available on Kaggle (https://www.kaggle.com/datasets/parisrohan/credit-score-classification). This dataset is segmented into training and testing sets, with the training portion comprising 100,000 rows and 28 columns, while the test dataset consists of 50,000 rows and 27 columns. The primary target column for prediction is the Credit Score, categorized into three main classes: Poor, Good, and Standard.
 
-
 Within the dataset, information for 12,500 customers is included, encompassing various details such as monthly income, the number of bank accounts and credit cards they possess, interest rates, credit utilization, and more.
 
-
 The dataset's overall quality is good, offering an extensive array of parameters related to the financial status of each customer. Despite its richness, there are missing values and some columns with blank entries, affecting less than 10% of the customer records. Addressing these issues is feasible through common techniques like replacing missing values with the mean, median, and mode, or deleting rows with substantial missing data that do not significantly contribute to the target variable.
-
 
 Throughout our exploration of datasets, we encountered challenges in finding one that included detailed financial information. The current dataset primarily covers payment history and monthly account balances, which are crucial factors in determining a person's financial health. In contrast, many other datasets found online lack this level of detail, often providing only basic information like interest rates and the number of accounts.
 
 
 ## Domain-specific Challenges
-<!-- Content for Domain-specific Challenges -->
+The domain of our project is working in Financial Credit Scoring and Assessment using Machine Learning. Some identified domain-specific challenges are as follows,
+ 
+1. Regulatory Compliance:
+In the financial domain, there are strict regulations governing the use and handling of sensitive financial information. Compliance with regulations such as GDPR, Fair Credit Reporting Act (FCRA), or other regional financial regulations is crucial.
+
+2. Ethical Considerations:
+The use of machine learning in credit scoring raises ethical considerations, particularly regarding fairness and transparency. Ensuring that the model doesn't discriminate against certain demographics is essential.
+ 
+3. Data Privacy:
+Financial data is highly sensitive. Ensuring the privacy and security of individuals' financial information is a critical challenge. Adherence to data protection laws and implementing robust security measures is paramount.
+ 
+4. Model Explainability:
+The interpretability of the chosen machine learning model is essential for stakeholders to understand the factors influencing credit scores. Transparent models may be preferred in this domain to justify decisions and comply with regulatory requirements.
+ 
+5. Bias and Fairness:
+Bias in credit scoring models can have significant social and economic implications. Ensuring fairness in model predictions and addressing biases that may arise from historical data is crucial for ethical credit assessment.
+ 
+Considering these challenges and addressing them in the development and deployment of our machine learning model will contribute to the responsible and effective use of credit scoring in the financial domain.
+
 
 ## KPI’s
-<!-- Content for KPI’s -->
+In the context of building a credit score classification model, several key performance indicators (KPIs) play a crucial role in evaluating the model's effectiveness. Accuracy is a fundamental metric, representing the overall correctness of the model's predictions. However, in the domain of credit score classification, precision and recall are equally vital. 
+
+Precision assesses the model's ability to correctly identify positive instances, indicating how well it avoids false positives. On the other hand, recall gauges the model's capability to capture all actual positive instances, reflecting its sensitivity to true positives. 
+
+Striking a balance between precision and recall is often crucial, as an excessively high precision might result in missed opportunities, while a high recall may lead to increased false positives. Additionally, metrics such as the F1 score, which considers both precision and recall and the area under the Receiver Operating Characteristic (ROC) curve are commonly employed in credit scoring models to provide a more comprehensive evaluation. 
+
+Ultimately, the choice of KPIs should align with the specific goals and priorities of the credit scoring application, balancing the need for accurate predictions with the consequences of false positives and false negatives in the given financial context.
+
