@@ -9,6 +9,7 @@
 6. [KPI’s](#kpis)
 7. [Project Deliverable 2](https://github.com/hkarnat1/credit-score-classification/tree/main/Deliverable%202)
 8. [Project Deliverable 3](https://github.com/hkarnat1/credit-score-classification/tree/main/Deliverable%203)
+9. [Project Deliverable 4](https://github.com/hkarnat1/credit-score-classification/tree/main/Deliverable%204)
 
 ## Project Scope and Business Goal
 The primary focus of the project is to address the problem of assessing individuals' creditworthiness with precision using machine learning techniques. The specific tasks and opportunities within this scope include:
